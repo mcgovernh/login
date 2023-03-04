@@ -14,17 +14,19 @@
       
     </ion-card-header>
   
-    <ion-card-content>    
+    <ion-card-content>  
+      <form #loginform="ngForm">  
       <ion-item>
         <ion-label>Email input</ion-label>
-        <ion-input type="email" placeholder="email@domain.com"></ion-input>
+        <ion-input type="email" placeholder="email@domain.com" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Password input</ion-label>
-        <ion-input type="password" value="password"></ion-input>
+        <ion-input type="password" value="password" required></ion-input>
       </ion-item>
       <ion-button color="dark" expand="block" id="forgot" (click)="btnClicked()" >Forget Email</ion-button>
-      <ion-button color="dark" expand="block" >LogIn</ion-button>
+      <ion-button color="dark" expand="block" (click)="btnEmail()">LogIn</ion-button>
+    </form>
     </ion-card-content>
   </ion-card>
   </div>

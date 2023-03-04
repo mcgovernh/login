@@ -12,6 +12,11 @@ export class LoginPage implements OnInit {
     {
       alert("Please try to  log in again");
      }
+  btnEmail()
+  {
+    alert("Please try to  log in again");
+    
+  }
     
   ngOnInit() {
   }
